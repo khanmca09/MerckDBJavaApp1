@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String args[]) throws SQLException{
 		Connection Connection = getConnection();
 		Statement stmt = Connection.createStatement();
-		stmt.executeUpdate("DROP TABLE IF EXIST ticks");
+		stmt.executeUpdate("DROP TABLE IF EXISTS ticks");
 		stmt.executeUpdate("CREATE TABLE ticks (tick timestamp)");
 		stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
 		
