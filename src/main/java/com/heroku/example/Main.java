@@ -11,7 +11,7 @@ public class Main {
 		Connection Connection = getConnection();
 		Statement stmt = Connection.createStatement();
 		stmt.executeUpdate("DROP TABLE IF EXIST ticks");
-		stmt.executeUpdate("CREATE TABLE ticks (tick timestamb)");
+		stmt.executeUpdate("CREATE TABLE ticks (tick timestamp)");
 		stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
 		
 		ResultSet rs = stmt.executeQuery("SELECT tick FROM ticks");
